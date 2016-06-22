@@ -7,10 +7,11 @@
   //  'end point' provided by server.js.
   repos.requestRepos = function(callback) {
     // replaced with git request below, done in class
-    $.get('/github/users/codefellows-seattle-301d7/repos' +
+    $.get('/github/users/meganreardon/repos' +
           '?per_page=10&sort=updated')
           .done(function(data) {
-            repos.allrepos = data;
+            repos.allRepos = data;
+            console.log("Got some stuff with ajax");
           }).done(callback); // .done chaining explicitly invokes the order of functions
     // commended / deleted this out in class
     // $.ajax({
